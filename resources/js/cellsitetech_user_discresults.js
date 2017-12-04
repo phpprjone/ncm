@@ -17,14 +17,14 @@ $(document).ready(function() {
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": ''},
-            
             { "data": "scantime" },
             { "data": "deviceipaddr" },
             { "data": "ping" },
             { "data": "deviceid" },
             { "data": "deviceos" },
             { "data": "nodeversion" },
-            
+            { "data": "deviceseries" },
+            { "data": "processed" },
         ],
         "order": [[1, 'asc']],
             // Per-row function to iterate cells

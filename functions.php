@@ -1396,12 +1396,15 @@ global $db2, $pages;
   $order_dir = $_GET['order'][0]['dir'];
 
   $columns = array(
+    'n.id',  
     'n.scantime',
     'n.deviceipaddr',
     'n.ping',
     'n.deviceid',
     'n.deviceos', 
-    'n.nodeversion', 
+    'n.nodeversion',
+    'n.deviceseries',
+    'n.processed'  
      ); 
 	 
   $sql_count = "SELECT COUNT(*) ";
@@ -1416,7 +1419,8 @@ global $db2, $pages;
     $sql_condition .=  " OR n.deviceid  LIKE '%". $search ."%'";
     $sql_condition .=  " OR n.deviceos  LIKE '%". $search ."%'";
     $sql_condition .=  " OR n.nodeversion  LIKE '%". $search ."%'";
-    
+    $sql_condition .=  " OR n.deviceseries  LIKE '%". $search ."%'";
+    $sql_condition .=  " OR n.processed  LIKE '%". $search ."%'";
     $sql_condition .=  " ) ";
   }
   $count_sql = $sql_count . $sql_condition; 
