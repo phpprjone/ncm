@@ -28,7 +28,8 @@ $(document).ready(function() {
             { "data": "id" },            
             { "data": "deviceName" },
             { "data": "deviceIpAddr" }, 
-            { "data": "custom_Location" }
+            { "data": "csr_site_id" },
+            { "data": "csr_site_name" }
         ],
         "order": [[1, 'asc']],
         "createdRow": function (row, data, rowIndex) {
@@ -40,25 +41,26 @@ $(document).ready(function() {
         }           
       });
  
-      $('#swt_user_devices').on( 'click', 'tr',function(){
-          $(this).toggleClass('drag_selected');
-
-          $('tr.drag_selected').draggable({
-          cursor: "move",
-                cursorAt: {
-                  top: -2,
-                  left: -2
-                },
-                helper: function(event) {
-                  var str = "<div></div>";
-                  var indderdiv ='';
-                  $('tr.drag_selected').each(function(e){
-                    indderdiv += "<div class='box' style='border:1px solid gray; background-color:lightblue;width:200px'><i data-deviceid='"+ $(this).data('deviceid')+"' data-devicename='"+ $(this).data('devicename')+"' class='fa fa-plus'></i> &nbsp; " + $(this).data('devicename')  +  "</div>";
-                  });
-                  return $(str).html(indderdiv);
-                
-                }
-          });
+      $('#swt_user_devices').not('THEAD').on( 'click', 'tr',function(){
+    	  if($(this).parent().get(0).tagName.toLowerCase() != 'thead'){
+	          $(this).toggleClass('drag_selected');
+	          $('tr.drag_selected').draggable({
+	          cursor: "move",
+	                cursorAt: {
+	                  top: -2,
+	                  left: -2
+	                },
+	                helper: function(event) {
+	                  var str = "<div></div>";
+	                  var indderdiv ='';
+	                  $('tr.drag_selected').each(function(e){
+	                    indderdiv += "<div class='box' style='border:1px solid gray; background-color:lightblue;width:200px'><i data-deviceid='"+ $(this).data('deviceid')+"' data-devicename='"+ $(this).data('devicename')+"' class='fa fa-plus'></i> &nbsp; " + $(this).data('devicename')  +  "</div>";
+	                  });
+	                  return $(str).html(indderdiv);
+	                
+	                }
+	          });
+    	  }
       });
 
       $('#swt_user_devices').on('mouseover', 'tbody', function (){      

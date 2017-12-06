@@ -66,7 +66,7 @@ modal.children[0].addEventListener('click', function(e) {
                             <table id="example" class="display" data-listid="<?php echo $listid ?>" cellspacing="0" width="100%">
                               <thead>
                                 <tr>
-                                  <th>&nbsp;</th>
+                                  <th>Health Check;</th>
 								  <th>Id</th>
                                   <th>Site Id</th>
                                   <th width="25%">Site Name</th>

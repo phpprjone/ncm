@@ -14,7 +14,7 @@ if (isset($_GET['clear']) ) {
 user_session_check();
  check_user_authentication('1'); //cellsite tech type user 
 
-    $page_title = 'Cellsite tech device list';
+    $page_title = 'NCM';
  
 ?>
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ user_session_check();
                             <table id="example" class="display" cellspacing="0" width="100%">
                               <thead>
                                 <tr>
-                                  <th>&nbsp;</th>
+                                  <th>Health Check</th>
                                   <th>Site Id</th>
                                   <th width="25%">Site Name</th>
                                   <th>Device Name</th>

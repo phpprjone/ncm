@@ -126,7 +126,7 @@
           ?>
           <div class="col-md-6 panel-warning">
             <div class="panel-heading" id="mylist_delete" style="background-color:#F6F6F6";>
-             <font color="black"> <b>Edit List&nbsp;:&nbsp;<?php echo $switchlist['mylistname'] ?></b></font>
+             <font color="black"> <b>Edit List&nbsp;:&nbsp;<?php $switchlistname= $switchlist['mylistname'] == 'Default' ? 'My Routers' : $switchlist['mylistname'];echo $switchlistname; ?></b></font>
                 <!-- Deleted selected list by drag   and drop area -->
                 <span type="button" class="box box-danger border pull-right"><font color="black"><i class="fa fa-trash"></i>&nbsp;<b>Delete</b></font>
                 </span>
@@ -295,14 +295,16 @@
               }
               ?>
 
-              <table id="swt_user_devices" class="table  table-border">
+               <table id="swt_user_devices" class="table  table-border">
                 <thead>
                   <tr>        
                     <th></th>
                     <th><b>ID</b></th>
                     <th><b>Device Name</th>
                     <th><b>Ip Address</th>
-                    <th><b>Custom Location</th>
+                  <!--  <th><b>Custom Location</th> -->
+					<th><b>Site ID</th>
+					<th><b>Site Name</th>
                   </tr>
                 </thead>
               </table> 

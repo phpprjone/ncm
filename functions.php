@@ -1125,12 +1125,13 @@ function get_swt_user_routers_list_datatable($list_for, $list_type) {
     'n.id',
     'n.deviceName',
     'n.deviceIpAddr',
-    'n.custom_Location',
+    'n.csr_site_name',
+    'n.csr_site_id' 
   );
 
 
-  $sql_count = " SELECT count(*) ";
-  $sql_select = " SELECT " . implode(", ", $columns);
+   $sql_count = " SELECT COUNT(DISTINCT n.id) as count ";
+  $sql_select = " SELECT distinct " . implode(", ", $columns);
 
   if ($list_type == 'user') {
     $userid = $_SESSION['userid'];
@@ -1152,7 +1153,8 @@ function get_swt_user_routers_list_datatable($list_for, $list_type) {
     $sql_condition .= "  n.deviceName LIKE '%". addslashes($search_term) ."%' " ;
     $sql_condition .= "  OR n.deviceIpAddr LIKE '%". addslashes($search_term) ."%' " ; 
     $sql_condition .= "  OR n.market LIKE '%". addslashes($search_term) ."%' " ;
-    $sql_condition .= "  OR n.custom_Location LIKE '%". addslashes($search_term) ."%' " ;
+    $sql_condition .= "  OR n.csr_site_id LIKE '%". addslashes($search_term) ."%' " ;
+    $sql_condition .= "  OR n.csr_site_name LIKE '%". addslashes($search_term) ."%' " ;
     $sql_condition .= " ) ";
   }
 

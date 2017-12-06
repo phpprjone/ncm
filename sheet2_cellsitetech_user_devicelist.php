@@ -34,7 +34,7 @@ $page_title = 'NCM';
   <div class="row">
    <!-- <div id="lhspanel"  class="col-sm-6 col-md-6 panel-info" style="background-color: white; min-height: 780px"> -->
    <div id="lhspanel" style="background-color: white; min-height: 780px">
-      <div id="mylist" class="panel-heading"><font color="black"><b>Discover Results</b></font>
+      <div id="mylist" class="panel-heading"><font color="black"><b>Discovery Results</b></font>
       </div>	
       <div class="panel-body">	
         <div class="col-md-6" style="background-color:nonelightgreen;">  

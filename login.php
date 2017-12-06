@@ -36,16 +36,18 @@ if (isset($_POST['username']) && $_POST['password']) {
   <head>
    <?php include "includes.php" ?>
   </head> 
-  <body>
-    
-    <!-- POPUP model bootrstap modle  -->  
-    <!-- Links -->    
-     <!--
-     <a href ="#" class=" launch-modal" >Launch Demo Modal </a>
-     -->
-     <?php
-     include "menu.php";
-     ?>
+  <body> 
+  
+     <header class="main-header">
+	  <div class="nav">
+		<div class="pull-left box"><a class="navbar-brand" href="#" >
+			<img src="resources/img/ncmlogo.png"  height = "20px"  alt=" ncm Logo"/>
+		  </a>
+		</div>
+	  </div> 
+	<hr style="border-top:5px solid red;">
+	</header> 
+  
      <div id="div1"></div> 
     <!-- Modal HTML -->
     <div id="myModal" class="modal fade">

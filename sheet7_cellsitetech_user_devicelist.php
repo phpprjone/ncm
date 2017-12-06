@@ -57,9 +57,9 @@ $page_title = 'Cellsite tech device list';
     <?php if(isset($_SESSION['ip_err'])): ?>
     <div class="alert alert-danger">
     <?php if(isset($_SESSION['ip_err']['type']) && $_SESSION['ip_err']['type'] == 'ip-err'){ ?>
-  	<strong>Danger!</strong> IP already In Use for <?php echo $_SESSION['ip_err']['market']; unset($_SESSION['ip_err']); ?>.
+  	<strong></strong> IP Address already In Use for <?php echo $_SESSION['ip_err']['market']; unset($_SESSION['ip_err']); ?>.
 	<?php }elseif(isset($_SESSION['ip_err']['type']) && $_SESSION['ip_err']['type'] == 'market-exist'){?>
-	<strong>Danger!</strong> Market already In Use for <?php echo $_SESSION['ip_err']['market']; unset($_SESSION['ip_err']); ?>.
+	<strong></strong> IP Address already In Use In Use for <?php echo $_SESSION['ip_err']['market']; unset($_SESSION['ip_err']); ?>.
 	<?php }?>
 	</div>
     <?php endif;?>
@@ -68,9 +68,10 @@ $page_title = 'Cellsite tech device list';
  <?php $market_list = get_market_list();
  
  //print '<pre>';
- //print_r($market_list);
+ //print_r($market_list);s
  ?>
-  <select name="market" class="form-control" required id="sel1">
+<select name="market" class="form-control" required id="sel1">
+
   	<option value="">Select Market</option>
   	<?php foreach ($market_list['result'] as $key => $val): ?>
     <option value="<?php echo $val['market_name']; ?>"><?php echo $val['market_name']; ?></option>
@@ -87,12 +88,12 @@ $page_title = 'Cellsite tech device list';
 <div id="ip-v4-grp-display">
 <div class="form-group">
     <div class="col-xs-8">
-        <input type="text" name="from_ipv4" class="form-control" required id="from_ipv4" placeholder="From IPV4">
+        <input type="text" name="from_ipv4" class="form-control" id="from_ipv4" placeholder="From IPV4">
     </div>
 </div>
 <div class="form-group">
     <div class="col-xs-8">
-        <input type="text" name="to_ipv4" class="form-control" required id="to_ipv4" placeholder="To IPV4">
+        <input type="text" name="to_ipv4" class="form-control" id="to_ipv4" placeholder="To IPV4">
     </div>
 </div>
 </div> 

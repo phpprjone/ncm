@@ -14,7 +14,7 @@ if (isset($_GET['clear']) ) {
 user_session_check();
  check_user_authentication('1'); //cellsite tech type user 
 
-    $page_title = 'Cellsite tech device list';
+    $page_title = 'NCM';
  
 ?>
 <!DOCTYPE html>
@@ -50,7 +50,7 @@ user_session_check();
 							-->
                           </div>                  
                           
- 							<div id="mylist" class="panel-heading" style = "height:430px;"><center><h1>This Page Under Construction</h1></div> 
+ 							<div id="mylist" class="panel-heading" style = "height:430px;"><img src="./resources/img/under_construction_animated.png"  style = "height:100%;width:100%;" alt="Sorry, this page is under Construction!" width="42" height="42" border="0"><center></div> 
                         <!-- /.box-body -->
                       </div>
                   </div> 

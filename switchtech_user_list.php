@@ -302,7 +302,8 @@
                     <th><b>ID</b></th>
                     <th><b>Device Name</th>
                     <th><b>Ip Address</th>
-                    <th><b>Custom Location</th>
+                    <th><b>Site ID</th>
+                    <th><b>Site Name</th>
                   </tr>
                 </thead>
               </table> 

@@ -29,7 +29,10 @@ $(document).ready(function() {
             // Per-row function to iterate cells
         "createdRow": function (row, data, rowIndex) {
              $(row).addClass('device_row');
-
+             $.each($('td', row), function (colIndex) {
+            	 if(colIndex == 0)
+            	   $(this).attr('title', 'Click here for health check');
+             });
         }
 
       } );
